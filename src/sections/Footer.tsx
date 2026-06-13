@@ -6,7 +6,7 @@ function Footer() {
       <Container>
         <div data-reveal="up" className="flex flex-col items-center justify-between gap-8 sm:flex-row">
           <img
-            src="/assets/cgx-logo-navbar-international.png"
+            src={`${import.meta.env.BASE_URL}assets/cgx-logo-international-clean.png`}
             alt="CGX International"
             className="h-24 w-auto"
           />

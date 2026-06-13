@@ -27,7 +27,7 @@ function Hero() {
           </div>
           <div data-reveal="right" className="cgx-image-blend relative">
             <img
-              src="/assets/cgx-welcome.png"
+              src={`${import.meta.env.BASE_URL}assets/cgx-welcome.png`}
               alt="Bienvenidos a CGX International"
               className="mx-auto max-h-[650px] w-full object-contain"
             />

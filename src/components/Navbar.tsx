@@ -21,7 +21,7 @@ function Navbar() {
             onClick={() => setIsMenuOpen(false)}
           >
             <img
-              src="/assets/cgx-logo-navbar-international.png"
+              src={`${import.meta.env.BASE_URL}assets/cgx-logo-international-clean.png`}
               alt="CGX International"
               className="h-20 w-auto object-contain"
             />

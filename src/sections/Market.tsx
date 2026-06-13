@@ -8,7 +8,7 @@ function Market() {
           <img
             data-reveal="left"
             loading="lazy"
-            src="/assets/cgx-market.png"
+            src={`${import.meta.env.BASE_URL}assets/cgx-market.png`}
             alt="El mundo es tu próximo mercado"
             className="mx-auto max-h-[680px] rounded-2xl object-contain shadow-2xl"
           />

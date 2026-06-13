@@ -72,7 +72,7 @@ function Contact() {
             </p>
           </div>
           <img
-            src="/assets/cgx-logo-navbar-international.png"
+            src={`${import.meta.env.BASE_URL}assets/cgx-logo-international-clean.png`}
             alt="CGX International"
             className="mx-auto mt-10 w-40 opacity-95"
           />

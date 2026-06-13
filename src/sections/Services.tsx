@@ -9,7 +9,7 @@ function Services() {
           <div data-reveal="left" className="cgx-image-blend cgx-image-blend-soft">
             <img
               loading="lazy"
-              src="/assets/cgx-services.png"
+              src={`${import.meta.env.BASE_URL}assets/cgx-services.png`}
               alt="Servicios integrales de comercio internacional"
               className="mx-auto max-h-[720px] object-contain"
             />
