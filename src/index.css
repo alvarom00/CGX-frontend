@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+  overflow-x: clip;
+}
+
+.cgx-image-blend {
+  position: relative;
+  overflow: hidden;
+}
+
+.cgx-image-blend::after {
+  position: absolute;
+  inset: -1px;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(to right, #020617 0%, transparent 18%, transparent 82%, #020617 100%),
+    linear-gradient(to bottom, #020617 0%, transparent 18%, transparent 78%, #020617 100%);
+}
+
+.cgx-image-blend-soft::after {
+  background:
+    linear-gradient(to right, #020617 0%, transparent 12%, transparent 88%, #020617 100%),
+    linear-gradient(to bottom, #020617 0%, transparent 12%, transparent 86%, #020617 100%);
+}
+
+.reveal-ready [data-reveal]:not([data-reveal="stagger"]) {
+  opacity: 0;
+  filter: blur(3px);
+  transition:
+    opacity 800ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 800ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-ready [data-reveal="up"]:not(.is-visible) {
+  transform: translateY(48px);
+}
+
+.reveal-ready [data-reveal="left"]:not(.is-visible) {
+  transform: translateX(-56px);
+}
+
+.reveal-ready [data-reveal="right"]:not(.is-visible) {
+  transform: translateX(56px);
+}
+
+.reveal-ready [data-reveal]:not([data-reveal="stagger"]).is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0);
+}
+
+.reveal-ready [data-reveal="stagger"] > * {
+  opacity: 0;
+  transform: translateY(34px);
+  transition:
+    opacity 650ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-ready [data-reveal="stagger"].is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-ready [data-reveal="stagger"].is-visible > :nth-child(2) {
+  transition-delay: 90ms;
+}
+
+.reveal-ready [data-reveal="stagger"].is-visible > :nth-child(3) {
+  transition-delay: 180ms;
+}
+
+.reveal-ready [data-reveal="stagger"].is-visible > :nth-child(4) {
+  transition-delay: 270ms;
+}
+
+.reveal-ready [data-reveal="stagger"].is-visible > :nth-child(5) {
+  transition-delay: 360ms;
+}
+
+.reveal-ready [data-reveal="stagger"]:not(.is-visible) > * {
+  transition-delay: 0ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal] > * {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
