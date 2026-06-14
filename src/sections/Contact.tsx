@@ -84,7 +84,7 @@ function Contact() {
 
         <form onSubmit={handleSubmit(onSubmit)} noValidate className="min-w-0 bg-slate-50 p-4 sm:p-10">
           <div className="mb-8 rounded-xl border border-gold/40 bg-gold/10 p-5 text-center shadow-sm lg:text-left">
-            <p className="cgx-subtitle text-sm uppercase tracking-[0.22em] text-gold">
+            <p className="cgx-subtitle text-xl uppercase tracking-[0.22em] text-gold">
               {es ? "Contacto directo" : "Direct contact"}
             </p>
             <p className="mt-3 leading-relaxed text-slate-700">
