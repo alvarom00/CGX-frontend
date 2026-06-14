@@ -23,6 +23,7 @@ h3 {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 600;
   overflow-wrap: anywhere;
+  text-transform: uppercase;
 }
 
 .cgx-subtitle {
