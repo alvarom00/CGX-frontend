@@ -62,7 +62,7 @@ function Contact() {
 
   return (
     <section id="contact" className="scroll-mt-24 bg-white px-4 py-20 sm:px-6 sm:py-28">
-      <div data-reveal="up" className="mx-auto grid w-full max-w-6xl overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-2xl lg:grid-cols-[0.8fr_1.2fr]">
+      <div data-reveal="up" className="mx-auto grid w-full min-w-0 max-w-6xl overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-2xl lg:grid-cols-[0.8fr_1.2fr]">
         <div className="flex flex-col justify-between bg-[linear-gradient(145deg,#0f172a,#020617)] p-6 text-center text-white sm:p-10 lg:text-left">
           <div>
             <p className="cgx-subtitle mb-4 text-sm uppercase tracking-[0.3em] text-gold">
@@ -82,7 +82,7 @@ function Contact() {
           />
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} noValidate className="bg-slate-50 p-4 sm:p-10">
+        <form onSubmit={handleSubmit(onSubmit)} noValidate className="min-w-0 bg-slate-50 p-4 sm:p-10">
           <div className="mb-8 rounded-xl border border-gold/40 bg-gold/10 p-5 text-center shadow-sm lg:text-left">
             <p className="cgx-subtitle text-sm uppercase tracking-[0.22em] text-gold">
               {es ? "Contacto directo" : "Direct contact"}

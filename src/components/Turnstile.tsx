@@ -18,6 +18,7 @@ declare global {
           "expired-callback": () => void;
           "error-callback": () => void;
           language: "es" | "en";
+          size: "flexible";
         },
       ) => string;
       remove: (widgetId: string) => void;
@@ -48,6 +49,7 @@ function Turnstile({ onTokenChange, language }: TurnstileProps) {
         "expired-callback": () => onTokenChangeRef.current(""),
         "error-callback": () => onTokenChangeRef.current(""),
         language,
+        size: "flexible",
       });
     };
 
@@ -80,7 +82,7 @@ function Turnstile({ onTokenChange, language }: TurnstileProps) {
     };
   }, [language]);
 
-  return <div ref={containerRef} />;
+  return <div ref={containerRef} className="w-full max-w-full" />;
 }
 
 export default Turnstile;

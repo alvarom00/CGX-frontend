@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap");
 @import "tailwindcss";
 
 @theme {
   --color-gold: #d9b45b;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
 }
 
 html {
@@ -18,14 +19,20 @@ body {
 
 h1,
 h2,
-h3,
-.cgx-subtitle {
-  font-family: "Cinzel", Georgia, serif;
+h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
   overflow-wrap: anywhere;
 }
 
 .cgx-subtitle {
+  font-family: "Cinzel", Georgia, serif;
   font-weight: 600;
+}
+
+.cgx-section-subtitle {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
 }
 
 .cgx-image-blend {
@@ -108,6 +115,13 @@ h3,
 
 .reveal-ready [data-reveal="stagger"]:not(.is-visible) > * {
   transition-delay: 0ms;
+}
+
+@media (max-width: 639px) {
+  .reveal-ready [data-reveal="left"]:not(.is-visible),
+  .reveal-ready [data-reveal="right"]:not(.is-visible) {
+    transform: translateY(36px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
