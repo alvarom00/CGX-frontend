@@ -65,7 +65,7 @@ function Contact() {
       <div data-reveal="up" className="mx-auto grid w-full max-w-6xl overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-2xl lg:grid-cols-[0.8fr_1.2fr]">
         <div className="flex flex-col justify-between bg-[linear-gradient(145deg,#0f172a,#020617)] p-8 text-white sm:p-10">
           <div>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-gold">
+            <p className="cgx-subtitle mb-4 text-sm uppercase tracking-[0.3em] text-gold">
               {es ? "Empecemos una conversación" : "Let's start a conversation"}
             </p>
             <h2 className="font-serif text-4xl leading-tight sm:text-5xl">
@@ -84,7 +84,7 @@ function Contact() {
 
         <form onSubmit={handleSubmit(onSubmit)} noValidate className="bg-slate-50 p-6 sm:p-10">
           <div className="mb-8 rounded-xl border border-gold/40 bg-gold/10 p-5 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-gold">
+            <p className="cgx-subtitle text-sm uppercase tracking-[0.22em] text-gold">
               {es ? "Contacto directo" : "Direct contact"}
             </p>
             <p className="mt-3 leading-relaxed text-slate-700">

@@ -26,7 +26,7 @@ function Hero() {
       <Container>
         <div data-reveal="up" className="relative z-10 mx-auto max-w-4xl text-center drop-shadow-[0_2px_12px_rgba(0,0,0,0.65)]">
           <img src="./assets/cgx-logo-international-clean.png" alt="CGX International" className="mx-auto mb-8 w-48 sm:w-56" />
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold sm:text-base">Global trade & business solutions</p>
+          <p className="cgx-subtitle text-sm uppercase tracking-[0.3em] text-gold sm:text-base">Global trade & business solutions</p>
           <h1 className="mt-7 font-serif text-5xl leading-tight sm:text-6xl lg:text-7xl">{text.title}</h1>
           <p className="mx-auto mt-7 max-w-3xl text-lg leading-relaxed text-slate-300 sm:text-xl">{text.description}</p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">

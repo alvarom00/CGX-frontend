@@ -14,7 +14,7 @@ function Services() {
             <img loading="lazy" src={`${import.meta.env.BASE_URL}assets/cgx-services.png`} alt={language === "es" ? "Servicios integrales de comercio internacional" : "Comprehensive international trade services"} className="mx-auto max-h-[720px] object-contain" />
           </div>
           <div data-reveal="right">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-gold">{language === "es" ? "Soluciones integrales" : "Comprehensive solutions"}</p>
+            <p className="cgx-subtitle mb-4 text-sm uppercase tracking-[0.3em] text-gold">{language === "es" ? "Soluciones integrales" : "Comprehensive solutions"}</p>
             <h2 className="font-serif text-4xl sm:text-5xl">{language === "es" ? "Servicios pensados para crecer" : "Services designed for growth"}</h2>
             <p className="mt-5 max-w-2xl leading-relaxed text-slate-300">{language === "es" ? "Diseñamos estrategias adaptadas a cada operación, conectando oportunidades, proveedores y mercados." : "We design strategies tailored to each operation, connecting opportunities, suppliers, and markets."}</p>
             <div data-reveal="stagger" className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">

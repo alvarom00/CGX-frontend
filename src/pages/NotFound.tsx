@@ -18,7 +18,7 @@ function NotFound() {
       <section className="relative z-10 mx-auto max-w-3xl">
         <img src={`${import.meta.env.BASE_URL}assets/cgx-logo-international-clean.png`} alt="CGX International" className="mx-auto w-44 sm:w-52" />
         <p className="mt-8 font-serif text-8xl leading-none text-gold sm:text-9xl">404</p>
-        <p className="mt-5 text-sm font-semibold uppercase tracking-[0.3em] text-gold">{es ? "Página no encontrada" : "Page not found"}</p>
+        <p className="cgx-subtitle mt-5 text-sm uppercase tracking-[0.3em] text-gold">{es ? "Página no encontrada" : "Page not found"}</p>
         <h1 className="mt-5 font-serif text-4xl leading-tight sm:text-5xl">{es ? "Parece que esta ruta no llega a destino." : "It seems this route does not reach its destination."}</h1>
         <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-slate-300">{es ? "La página que buscás no existe o fue trasladada. Podés regresar al inicio o comunicarte con nuestro equipo." : "The page you are looking for does not exist or has been moved. You can return home or contact our team."}</p>
         <div className="mt-9 flex flex-wrap justify-center gap-4">
