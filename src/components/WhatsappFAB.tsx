@@ -1,11 +1,14 @@
+import { useLanguage } from "../context/language";
+
 function WhatsappFAB() {
+  const { language } = useLanguage();
   return (
     <a
       href="https://wa.me/542914421242"
       target="_blank"
       rel="noreferrer"
-      aria-label="Contactar por WhatsApp"
-      className="group fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-green-950/30 transition duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-[#20bd5a] hover:shadow-2xl hover:shadow-green-500/40 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-green-400/40 sm:bottom-6 sm:right-6 sm:h-16 sm:w-16"
+      aria-label={language === "es" ? "Contactar por WhatsApp" : "Contact us on WhatsApp"}
+      className="group fixed right-5 top-1/2 z-50 flex h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-green-950/30 transition duration-300 hover:-translate-y-1/2 hover:scale-110 hover:bg-[#20bd5a] hover:shadow-2xl hover:shadow-green-500/40 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-green-400/40 sm:right-6 sm:h-16 sm:w-16"
     >
       <span className="absolute inset-0 rounded-full border border-white/30 transition duration-500 group-hover:scale-125 group-hover:opacity-0" />
       <svg

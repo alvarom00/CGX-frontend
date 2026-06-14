@@ -4,6 +4,7 @@ const scriptId = "cloudflare-turnstile-script";
 
 type TurnstileProps = {
   onTokenChange: (token: string) => void;
+  language: "es" | "en";
 };
 
 declare global {
@@ -16,6 +17,7 @@ declare global {
           callback: (token: string) => void;
           "expired-callback": () => void;
           "error-callback": () => void;
+          language: "es" | "en";
         },
       ) => string;
       remove: (widgetId: string) => void;
@@ -23,7 +25,7 @@ declare global {
   }
 }
 
-function Turnstile({ onTokenChange }: TurnstileProps) {
+function Turnstile({ onTokenChange, language }: TurnstileProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const widgetIdRef = useRef<string | null>(null);
   const onTokenChangeRef = useRef(onTokenChange);
@@ -45,6 +47,7 @@ function Turnstile({ onTokenChange }: TurnstileProps) {
         callback: (token) => onTokenChangeRef.current(token),
         "expired-callback": () => onTokenChangeRef.current(""),
         "error-callback": () => onTokenChangeRef.current(""),
+        language,
       });
     };
 
@@ -75,7 +78,7 @@ function Turnstile({ onTokenChange }: TurnstileProps) {
         widgetIdRef.current = null;
       }
     };
-  }, []);
+  }, [language]);
 
   return <div ref={containerRef} />;
 }

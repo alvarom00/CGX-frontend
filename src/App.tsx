@@ -10,8 +10,19 @@ import Market from "./sections/Market";
 import Footer from "./sections/Footer";
 import WhatsappFAB from "./components/WhatsappFAB";
 import ScrollReveal from "./components/ScrollReveal";
+import NotFound from "./pages/NotFound";
 
 function App() {
+  const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+  const isHomePage =
+    window.location.pathname === "/" ||
+    window.location.pathname === basePath ||
+    window.location.pathname === `${basePath}/`;
+
+  if (!isHomePage) {
+    return <NotFound />;
+  }
+
   return (
     <>
       <ScrollReveal />
@@ -20,11 +31,11 @@ function App() {
       <main>
         <Hero />
         <Contact />
+        <Services />
+        <WhyUs />
+        <Process />
         <Audience />
         <Market />
-        <Services />
-        <Process />
-        <WhyUs />
       </main>
 
       <Footer />
