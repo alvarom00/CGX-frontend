@@ -5,13 +5,14 @@ import { getSiteData } from "../data/siteData";
 function Services() {
   const { language } = useLanguage();
   const { services } = getSiteData(language);
+  const servicesImage = language === "es" ? "cgx-services-clean.png" : "cgx-services-en.png";
 
   return (
     <section id="services" className="bg-slate-950 py-24 text-white">
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div data-reveal="left" className="cgx-image-blend cgx-image-blend-soft">
-            <img loading="lazy" src={`${import.meta.env.BASE_URL}assets/cgx-services-clean.png`} alt={language === "es" ? "Servicios integrales de comercio internacional" : "Comprehensive international trade services"} className="mx-auto max-h-[720px] object-contain" />
+            <img loading="lazy" src={`${import.meta.env.BASE_URL}assets/${servicesImage}`} alt={language === "es" ? "Servicios integrales de comercio internacional" : "Comprehensive international trade services"} className="mx-auto max-h-[720px] object-contain" />
           </div>
           <div data-reveal="right" className="text-center lg:text-left">
             <p className="cgx-subtitle mb-4 text-sm uppercase tracking-[0.3em] text-gold">{language === "es" ? "Soluciones integrales" : "Comprehensive solutions"}</p>
