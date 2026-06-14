@@ -63,12 +63,12 @@ function Contact() {
   return (
     <section id="contact" className="scroll-mt-24 bg-white px-4 py-20 sm:px-6 sm:py-28">
       <div data-reveal="up" className="mx-auto grid w-full max-w-6xl overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-2xl lg:grid-cols-[0.8fr_1.2fr]">
-        <div className="flex flex-col justify-between bg-[linear-gradient(145deg,#0f172a,#020617)] p-8 text-white sm:p-10">
+        <div className="flex flex-col justify-between bg-[linear-gradient(145deg,#0f172a,#020617)] p-6 text-center text-white sm:p-10 lg:text-left">
           <div>
             <p className="cgx-subtitle mb-4 text-sm uppercase tracking-[0.3em] text-gold">
               {es ? "Empecemos una conversación" : "Let's start a conversation"}
             </p>
-            <h2 className="font-serif text-4xl leading-tight sm:text-5xl">
+            <h2 className="font-serif text-3xl leading-tight sm:text-4xl lg:text-5xl">
               {es ? "Conectemos tu empresa con nuevas oportunidades." : "Let's connect your business with new opportunities."}
             </h2>
             <p className="mt-6 leading-relaxed text-slate-300">
@@ -82,8 +82,8 @@ function Contact() {
           />
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} noValidate className="bg-slate-50 p-6 sm:p-10">
-          <div className="mb-8 rounded-xl border border-gold/40 bg-gold/10 p-5 shadow-sm">
+        <form onSubmit={handleSubmit(onSubmit)} noValidate className="bg-slate-50 p-4 sm:p-10">
+          <div className="mb-8 rounded-xl border border-gold/40 bg-gold/10 p-5 text-center shadow-sm lg:text-left">
             <p className="cgx-subtitle text-sm uppercase tracking-[0.22em] text-gold">
               {es ? "Contacto directo" : "Direct contact"}
             </p>
@@ -94,7 +94,7 @@ function Contact() {
               href="https://wa.me/542914421242"
               target="_blank"
               rel="noreferrer"
-              className="group mt-5 inline-flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-3 font-semibold text-white shadow-lg shadow-green-900/15 transition duration-300 hover:-translate-y-0.5 hover:bg-[#20bd5a] hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-green-400/30"
+              className="group mx-auto mt-5 inline-flex max-w-full items-center justify-center gap-3 rounded-full bg-[#25D366] px-5 py-3 text-center font-semibold text-white shadow-lg shadow-green-900/15 transition duration-300 hover:-translate-y-0.5 hover:bg-[#20bd5a] hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-green-400/30 lg:mx-0"
             >
               <svg
                 viewBox="0 0 32 32"
@@ -230,13 +230,13 @@ function Contact() {
             />
 
             {errors.message && (
-              <p className="mt-1 text-sm text-red-500">
+              <p className="mt-1 text-center text-sm text-red-500 lg:text-left">
                 {errors.message.message}
               </p>
             )}
           </div>
 
-          <div className="mb-6">
+          <div className="mb-6 flex flex-col items-center lg:items-start">
             <Turnstile
               key={`${turnstileKey}-${language}`}
               language={language}
@@ -260,7 +260,7 @@ function Contact() {
           {submitMessage && (
             <div
               role="status"
-              className={`mb-4 rounded-md border px-4 py-3 text-sm font-medium ${
+              className={`mb-4 rounded-md border px-4 py-3 text-center text-sm font-medium ${
                 submitSucceeded
                   ? "border-green-500 bg-green-50 text-green-700"
                   : "border-red-500 bg-red-50 text-red-700"

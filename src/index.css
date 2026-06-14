@@ -21,6 +21,7 @@ h2,
 h3,
 .cgx-subtitle {
   font-family: "Cinzel", Georgia, serif;
+  overflow-wrap: anywhere;
 }
 
 .cgx-subtitle {

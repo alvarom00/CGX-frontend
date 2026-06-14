@@ -12,9 +12,9 @@ function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-gold/20 bg-slate-950/95 backdrop-blur">
       <Container>
-        <nav className="relative flex h-24 items-center justify-between">
-          <a href="#hero" aria-label="CGX International - Home" className="flex h-20 items-center" onClick={() => setIsMenuOpen(false)}>
-            <img src={`${import.meta.env.BASE_URL}assets/cgx-logo-international-clean.png`} alt="CGX International" className="h-20 w-auto object-contain" />
+        <nav className="relative flex h-20 items-center justify-between sm:h-24">
+          <a href="#hero" aria-label="CGX International - Home" className="flex h-16 items-center sm:h-20" onClick={() => setIsMenuOpen(false)}>
+            <img src={`${import.meta.env.BASE_URL}assets/cgx-logo-international-clean.png`} alt="CGX International" className="h-16 w-auto object-contain sm:h-20" />
           </a>
           <ul className="hidden items-center gap-2 md:flex">
             {links.map((link) => (
@@ -34,7 +34,7 @@ function Navbar() {
               <span className={`absolute bottom-0 left-0 h-0.5 w-6 rounded-full bg-current transition duration-300 ${isMenuOpen ? "-translate-y-[9px] -rotate-45" : ""}`} />
             </span>
           </button>
-          <div className={`absolute left-0 right-0 top-24 overflow-hidden border-b border-gold/20 bg-[#020617] shadow-2xl shadow-black/60 transition-all duration-300 md:hidden ${isMenuOpen ? "visible translate-y-0 opacity-100" : "invisible -translate-y-3 opacity-0"}`}>
+          <div className={`absolute left-0 right-0 top-20 overflow-hidden border-b border-gold/20 bg-[#020617] shadow-2xl shadow-black/60 transition-all duration-300 sm:top-24 md:hidden ${isMenuOpen ? "visible translate-y-0 opacity-100" : "invisible -translate-y-3 opacity-0"}`}>
             <ul className="space-y-1 px-5 py-5">
               {links.map((link) => <li key={link.href}><a href={link.href} onClick={() => setIsMenuOpen(false)} className="group flex items-center justify-between rounded-xl border border-transparent px-4 py-3.5 font-semibold text-slate-100 transition duration-300 hover:border-gold/20 hover:bg-white/5 hover:text-gold">{link.label}<span className="text-gold transition-transform duration-300 group-hover:translate-x-1">→</span></a></li>)}
               <li><button type="button" onClick={() => { toggleLanguage(); setIsMenuOpen(false); }} className="mt-2 w-full rounded-xl border border-gold/40 px-4 py-3.5 text-left font-semibold text-gold transition hover:bg-gold hover:text-slate-950">{language === "es" ? "English" : "Español"}</button></li>
