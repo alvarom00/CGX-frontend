@@ -16,5 +16,5 @@ export default defineConfig({
       },
     },
   ],
-  base: "/CGX-frontend/",
+  base: "/",
 })
