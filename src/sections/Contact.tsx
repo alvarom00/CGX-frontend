@@ -68,7 +68,7 @@ function Contact() {
             <p className="cgx-subtitle mb-4 text-sm uppercase tracking-[0.3em] text-gold">
               {es ? "Empecemos una conversación" : "Let's start a conversation"}
             </p>
-            <h2 className="font-serif text-3xl leading-tight sm:text-4xl lg:text-5xl">
+            <h2 className="mx-auto max-w-md font-serif text-3xl leading-tight sm:text-4xl lg:mx-0 lg:text-[2.75rem]">
               {es ? "Conectemos tu empresa con nuevas oportunidades." : "Let's connect your business with new opportunities."}
             </h2>
             <p className="mt-6 leading-relaxed text-slate-300">

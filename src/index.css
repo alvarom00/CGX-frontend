@@ -22,7 +22,8 @@ h2,
 h3 {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 600;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  word-break: normal;
   text-transform: uppercase;
 }
 
